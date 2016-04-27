@@ -42,6 +42,7 @@
 		19CBF57B1CCB045300CDA0A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBF57A1CCB045300CDA0A8 /* ProfileViewController.swift */; };
 		19D033511CC84B50001E9E39 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D033501CC84B50001E9E39 /* SignUpViewController.swift */; };
 		19ECE0411CCF338800BE87B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19ECE0401CCF338800BE87B7 /* SettingsViewController.swift */; };
+		745D9DF71CD13BCE0010B893 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745D9DF61CD13BCE0010B893 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		19D033501CC84B50001E9E39 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		19ECE0401CCF338800BE87B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		19F90FEC1CCBCC1900ADC4BA /* BookmindAlfa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BookmindAlfa-Bridging-Header.h"; sourceTree = "<group>"; };
+		745D9DF61CD13BCE0010B893 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				1920E56A1CBD4B0C00C88073 /* AppDelegate.swift */,
 				1920E56C1CBD4B0C00C88073 /* ViewController.swift */,
 				1920E56E1CBD4B0C00C88073 /* Main.storyboard */,
+				745D9DF61CD13BCE0010B893 /* SearchViewController.swift */,
 				19ECE0401CCF338800BE87B7 /* SettingsViewController.swift */,
 				19CBF57A1CCB045300CDA0A8 /* ProfileViewController.swift */,
 				198393F41CC89F7800276683 /* SecondSignUpViewController.swift */,
@@ -396,6 +399,7 @@
 				1920E56B1CBD4B0C00C88073 /* AppDelegate.swift in Sources */,
 				19CBF57B1CCB045300CDA0A8 /* ProfileViewController.swift in Sources */,
 				192541931CC71B19009BA409 /* OnBoardingViewController.swift in Sources */,
+				745D9DF71CD13BCE0010B893 /* SearchViewController.swift in Sources */,
 				198393F51CC89F7800276683 /* SecondSignUpViewController.swift in Sources */,
 				192541951CC71DF8009BA409 /* OBE1ViewController.swift in Sources */,
 				192541971CC71F1D009BA409 /* OBE2ViewController.swift in Sources */,

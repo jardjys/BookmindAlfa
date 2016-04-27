@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9ge-IL-0dT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9ge-IL-0dT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1532,15 +1532,16 @@
             </objects>
             <point key="canvasLocation" x="2727" y="407.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="2Ml-Tr-q1v">
             <objects>
-                <viewController id="oRj-hd-ki2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oRj-hd-ki2" customClass="SearchViewController" customModule="BookmindAlfa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M7Z-mc-Beq"/>
                         <viewControllerLayoutGuide type="bottom" id="KYu-S1-G1X"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x3C-Bk-XQP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZC-F7-C4A">
@@ -1566,6 +1567,10 @@
                                             <outlet property="delegate" destination="eQJ-aB-s33" id="J5o-hO-0ni"/>
                                         </connections>
                                     </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vvn-mi-sk6">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.4549019608" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1573,8 +1578,12 @@
                                     <constraint firstItem="dgg-cc-Rwz" firstAttribute="width" secondItem="SZC-F7-C4A" secondAttribute="width" multiplier="0.8" id="Ei9-ff-H5o"/>
                                     <constraint firstItem="Est-Ay-3z5" firstAttribute="centerX" secondItem="SZC-F7-C4A" secondAttribute="centerX" id="Jvd-Di-SD9"/>
                                     <constraint firstItem="dgg-cc-Rwz" firstAttribute="centerY" secondItem="SZC-F7-C4A" secondAttribute="centerY" multiplier="0.3" id="WrY-U4-6xv"/>
+                                    <constraint firstItem="Vvn-mi-sk6" firstAttribute="centerY" secondItem="SZC-F7-C4A" secondAttribute="centerY" multiplier="1.25" id="dly-mc-odE"/>
+                                    <constraint firstItem="Vvn-mi-sk6" firstAttribute="centerX" secondItem="SZC-F7-C4A" secondAttribute="centerX" id="epI-MP-PKM"/>
+                                    <constraint firstItem="Vvn-mi-sk6" firstAttribute="width" secondItem="SZC-F7-C4A" secondAttribute="width" id="fm6-OG-MEF"/>
                                     <constraint firstItem="Est-Ay-3z5" firstAttribute="width" secondItem="SZC-F7-C4A" secondAttribute="width" id="g9i-gh-fFL"/>
                                     <constraint firstItem="Est-Ay-3z5" firstAttribute="height" secondItem="SZC-F7-C4A" secondAttribute="height" multiplier="0.1" id="gfl-U4-eAK"/>
+                                    <constraint firstItem="Vvn-mi-sk6" firstAttribute="height" secondItem="SZC-F7-C4A" secondAttribute="height" multiplier="0.66" id="iYS-XF-Wuh"/>
                                     <constraint firstItem="dgg-cc-Rwz" firstAttribute="centerX" secondItem="SZC-F7-C4A" secondAttribute="centerX" id="oeN-sg-FHb"/>
                                     <constraint firstItem="Est-Ay-3z5" firstAttribute="top" secondItem="SZC-F7-C4A" secondAttribute="top" constant="33" id="pjE-aY-WF2">
                                         <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -1587,6 +1596,7 @@
                                         <exclude reference="Est-Ay-3z5"/>
                                         <exclude reference="MZV-fB-inL"/>
                                         <exclude reference="dgg-cc-Rwz"/>
+                                        <exclude reference="Vvn-mi-sk6"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="Jvd-Di-SD9"/>
@@ -1599,6 +1609,10 @@
                                         <exclude reference="qQd-eb-Dw3"/>
                                         <exclude reference="2if-fa-Bde"/>
                                         <exclude reference="uL6-ic-9LR"/>
+                                        <exclude reference="dly-mc-odE"/>
+                                        <exclude reference="epI-MP-PKM"/>
+                                        <exclude reference="fm6-OG-MEF"/>
+                                        <exclude reference="iYS-XF-Wuh"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -1606,6 +1620,7 @@
                                         <include reference="Est-Ay-3z5"/>
                                         <include reference="MZV-fB-inL"/>
                                         <include reference="dgg-cc-Rwz"/>
+                                        <include reference="Vvn-mi-sk6"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="Jvd-Di-SD9"/>
@@ -1618,6 +1633,10 @@
                                         <include reference="qQd-eb-Dw3"/>
                                         <include reference="2if-fa-Bde"/>
                                         <include reference="uL6-ic-9LR"/>
+                                        <include reference="dly-mc-odE"/>
+                                        <include reference="epI-MP-PKM"/>
+                                        <include reference="fm6-OG-MEF"/>
+                                        <include reference="iYS-XF-Wuh"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -1652,6 +1671,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="searchText" destination="dgg-cc-Rwz" id="utE-hV-QaL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4as-SA-bYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
