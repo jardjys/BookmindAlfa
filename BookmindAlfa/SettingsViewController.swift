@@ -27,9 +27,8 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //Get User Data
-        
-        let query = PFUser.query()
         SwiftLoading().showLoading()
+        let query = PFUser.query()
         query!.getObjectInBackgroundWithId(userid) {
             (user: PFObject?, error: NSError?) -> Void in
             if error == nil && user != nil {
@@ -39,14 +38,13 @@ class SettingsViewController: UIViewController {
                 userImage.getDataInBackgroundWithBlock{(imageData: NSData?, error: NSError?) -> Void in
                     if error ==  nil {
                         self.profPic.image = UIImage(data: imageData!)
-                        SwiftLoading().hideLoading()
                     }
                 }
             } else {
                 print(error)
-                SwiftLoading().hideLoading()
             }
-            
+            SwiftLoading().hideLoading()
+
         }
         //Label Style
         titleLabel.font = UIFont(name: "Montserrat-Bold", size: 20)
@@ -129,9 +127,9 @@ class SettingsViewController: UIViewController {
     //Accept pressed
     @IBAction func acceptPressed(sender: AnyObject) {
         
+        SwiftLoading().showLoading()
         if ((self.passwordText.text?.isEmpty) == true) {
             let query2 = PFUser.query()
-            SwiftLoading().showLoading()
             query2!.getObjectInBackgroundWithId(userid) {
                 (user: PFObject?, error: NSError?) -> Void in
                 if error == nil && user != nil {
@@ -140,13 +138,11 @@ class SettingsViewController: UIViewController {
                     user?.saveInBackground();
                 } else {
                     print(error)
-                    SwiftLoading().hideLoading()
                 }
                 
             }
         } else {
             let query2 = PFUser.query()
-            SwiftLoading().showLoading()
             query2!.getObjectInBackgroundWithId(userid) {
                 (user: PFObject?, error: NSError?) -> Void in
                 if error == nil && user != nil {
@@ -156,7 +152,6 @@ class SettingsViewController: UIViewController {
                     user?.saveInBackground();
                 } else {
                     print(error)
-                    SwiftLoading().hideLoading()
                 }
             }
         }
@@ -168,13 +163,18 @@ class SettingsViewController: UIViewController {
     
     //Cancel pressed
     @IBAction func cancelPressed(sender: AnyObject) {
+        SwiftLoading().showLoading()
         performSegueWithIdentifier("accept", sender: self.cancelButton)
+
     }
     
     //Prepare for segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destinationVC : ProfileViewController = segue.destinationViewController as! ProfileViewController
         destinationVC.iduser = self.userid;
+        SwiftLoading().hideLoading()
+
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
