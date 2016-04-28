@@ -37,7 +37,12 @@
 		192541971CC71F1D009BA409 /* OBE2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192541961CC71F1D009BA409 /* OBE2ViewController.swift */; };
 		192541991CC7219B009BA409 /* OBE3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192541981CC7219B009BA409 /* OBE3ViewController.swift */; };
 		1925419B1CC741C7009BA409 /* MainSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1925419A1CC741C7009BA409 /* MainSignViewController.swift */; };
+		1936E33D1CD1870C00A631ED /* BookSearchViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1936E33C1CD1870C00A631ED /* BookSearchViewCell.xib */; };
+		1936E33F1CD189A900A631ED /* BookSearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936E33E1CD189A900A631ED /* BookSearchViewCell.swift */; };
+		1936E3461CD1D8DA00A631ED /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936E3451CD1D8DA00A631ED /* BookDetailViewController.swift */; };
 		198393F51CC89F7800276683 /* SecondSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198393F41CC89F7800276683 /* SecondSignUpViewController.swift */; };
+		198F9ED81CD2653200EE54E8 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198F9ED71CD2653200EE54E8 /* ListTableViewCell.xib */; };
+		198F9EDA1CD2656800EE54E8 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198F9ED91CD2656800EE54E8 /* ListTableViewCell.swift */; };
 		19CBF5751CCAEFC300CDA0A8 /* SwiftLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBF5741CCAEFC300CDA0A8 /* SwiftLoading.swift */; };
 		19CBF57B1CCB045300CDA0A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBF57A1CCB045300CDA0A8 /* ProfileViewController.swift */; };
 		19D033511CC84B50001E9E39 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D033501CC84B50001E9E39 /* SignUpViewController.swift */; };
@@ -99,7 +104,12 @@
 		192541961CC71F1D009BA409 /* OBE2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBE2ViewController.swift; sourceTree = "<group>"; };
 		192541981CC7219B009BA409 /* OBE3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBE3ViewController.swift; sourceTree = "<group>"; };
 		1925419A1CC741C7009BA409 /* MainSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSignViewController.swift; sourceTree = "<group>"; };
+		1936E33C1CD1870C00A631ED /* BookSearchViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookSearchViewCell.xib; sourceTree = "<group>"; };
+		1936E33E1CD189A900A631ED /* BookSearchViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearchViewCell.swift; sourceTree = "<group>"; };
+		1936E3451CD1D8DA00A631ED /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookDetailViewController.swift; path = ../BookDetailViewController.swift; sourceTree = "<group>"; };
 		198393F41CC89F7800276683 /* SecondSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondSignUpViewController.swift; sourceTree = "<group>"; };
+		198F9ED71CD2653200EE54E8 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		198F9ED91CD2656800EE54E8 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		19CBF5741CCAEFC300CDA0A8 /* SwiftLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLoading.swift; sourceTree = "<group>"; };
 		19CBF57A1CCB045300CDA0A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		19D033501CC84B50001E9E39 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -174,19 +184,12 @@
 		1920E5691CBD4B0C00C88073 /* BookmindAlfa */ = {
 			isa = PBXGroup;
 			children = (
-				192541921CC71B19009BA409 /* OnBoardingViewController.swift */,
-				192541981CC7219B009BA409 /* OBE3ViewController.swift */,
-				192541941CC71DF8009BA409 /* OBE1ViewController.swift */,
-				192541961CC71F1D009BA409 /* OBE2ViewController.swift */,
+				1936E3421CD18A7700A631ED /* OnBoarding */,
 				1920E56A1CBD4B0C00C88073 /* AppDelegate.swift */,
 				1920E56C1CBD4B0C00C88073 /* ViewController.swift */,
 				1920E56E1CBD4B0C00C88073 /* Main.storyboard */,
-				745D9DF61CD13BCE0010B893 /* SearchViewController.swift */,
-				19ECE0401CCF338800BE87B7 /* SettingsViewController.swift */,
-				19CBF57A1CCB045300CDA0A8 /* ProfileViewController.swift */,
-				198393F41CC89F7800276683 /* SecondSignUpViewController.swift */,
-				19D033501CC84B50001E9E39 /* SignUpViewController.swift */,
-				1925419A1CC741C7009BA409 /* MainSignViewController.swift */,
+				1936E3441CD18A9700A631ED /* Rows */,
+				1936E3431CD18A8A00A631ED /* Views */,
 				1920E5711CBD4B0C00C88073 /* Assets.xcassets */,
 				1920E5731CBD4B0C00C88073 /* LaunchScreen.storyboard */,
 				1920E5761CBD4B0C00C88073 /* Info.plist */,
@@ -253,6 +256,42 @@
 				1920E5BD1CBD526D00C88073 /* Montserrat-Regular.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		1936E3421CD18A7700A631ED /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				192541921CC71B19009BA409 /* OnBoardingViewController.swift */,
+				192541981CC7219B009BA409 /* OBE3ViewController.swift */,
+				192541941CC71DF8009BA409 /* OBE1ViewController.swift */,
+				192541961CC71F1D009BA409 /* OBE2ViewController.swift */,
+			);
+			name = OnBoarding;
+			sourceTree = "<group>";
+		};
+		1936E3431CD18A8A00A631ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1936E3451CD1D8DA00A631ED /* BookDetailViewController.swift */,
+				745D9DF61CD13BCE0010B893 /* SearchViewController.swift */,
+				19ECE0401CCF338800BE87B7 /* SettingsViewController.swift */,
+				19CBF57A1CCB045300CDA0A8 /* ProfileViewController.swift */,
+				198393F41CC89F7800276683 /* SecondSignUpViewController.swift */,
+				19D033501CC84B50001E9E39 /* SignUpViewController.swift */,
+				1925419A1CC741C7009BA409 /* MainSignViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1936E3441CD18A9700A631ED /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				1936E33C1CD1870C00A631ED /* BookSearchViewCell.xib */,
+				1936E33E1CD189A900A631ED /* BookSearchViewCell.swift */,
+				198F9ED71CD2653200EE54E8 /* ListTableViewCell.xib */,
+				198F9ED91CD2656800EE54E8 /* ListTableViewCell.swift */,
+			);
+			name = Rows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,9 +401,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198F9ED81CD2653200EE54E8 /* ListTableViewCell.xib in Resources */,
 				1920E5CE1CBD54F500C88073 /* Montserrat-Regular.ttf in Resources */,
 				1920E5CD1CBD54F100C88073 /* Montserrat-Bold.ttf in Resources */,
 				1920E5751CBD4B0C00C88073 /* LaunchScreen.storyboard in Resources */,
+				1936E33D1CD1870C00A631ED /* BookSearchViewCell.xib in Resources */,
 				1920E5721CBD4B0C00C88073 /* Assets.xcassets in Resources */,
 				1920E5701CBD4B0C00C88073 /* Main.storyboard in Resources */,
 			);
@@ -392,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1920E56D1CBD4B0C00C88073 /* ViewController.swift in Sources */,
+				198F9EDA1CD2656800EE54E8 /* ListTableViewCell.swift in Sources */,
 				192541991CC7219B009BA409 /* OBE3ViewController.swift in Sources */,
 				19CBF5751CCAEFC300CDA0A8 /* SwiftLoading.swift in Sources */,
 				19D033511CC84B50001E9E39 /* SignUpViewController.swift in Sources */,
@@ -400,10 +442,12 @@
 				19CBF57B1CCB045300CDA0A8 /* ProfileViewController.swift in Sources */,
 				192541931CC71B19009BA409 /* OnBoardingViewController.swift in Sources */,
 				745D9DF71CD13BCE0010B893 /* SearchViewController.swift in Sources */,
+				1936E33F1CD189A900A631ED /* BookSearchViewCell.swift in Sources */,
 				198393F51CC89F7800276683 /* SecondSignUpViewController.swift in Sources */,
 				192541951CC71DF8009BA409 /* OBE1ViewController.swift in Sources */,
 				192541971CC71F1D009BA409 /* OBE2ViewController.swift in Sources */,
 				19ECE0411CCF338800BE87B7 /* SettingsViewController.swift in Sources */,
+				1936E3461CD1D8DA00A631ED /* BookDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="SyR-hb-VW5" customClass="ListTableViewCell" customModule="BookmindAlfa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SyR-hb-VW5" id="tcq-mv-05c">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTV-N7-FuH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a6A-IZ-kLP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH9-FB-d0m">
+                        <rect key="frame" x="139" y="45" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="a6A-IZ-kLP" firstAttribute="width" secondItem="tcq-mv-05c" secondAttribute="width" id="5Hy-IC-hTc"/>
+                    <constraint firstItem="a6A-IZ-kLP" firstAttribute="height" secondItem="tcq-mv-05c" secondAttribute="height" id="9x7-24-3NQ"/>
+                    <constraint firstItem="bH9-FB-d0m" firstAttribute="centerY" secondItem="a6A-IZ-kLP" secondAttribute="centerY" id="DcY-bb-oK2"/>
+                    <constraint firstItem="a6A-IZ-kLP" firstAttribute="centerX" secondItem="tcq-mv-05c" secondAttribute="centerX" id="QSf-Cj-hTm"/>
+                    <constraint firstItem="BTV-N7-FuH" firstAttribute="centerX" secondItem="tcq-mv-05c" secondAttribute="centerX" id="dZa-6M-cza"/>
+                    <constraint firstItem="bH9-FB-d0m" firstAttribute="centerX" secondItem="a6A-IZ-kLP" secondAttribute="centerX" id="jLk-ui-jlu"/>
+                    <constraint firstItem="a6A-IZ-kLP" firstAttribute="centerY" secondItem="tcq-mv-05c" secondAttribute="centerY" id="kEW-j5-PaT"/>
+                    <constraint firstItem="BTV-N7-FuH" firstAttribute="height" secondItem="tcq-mv-05c" secondAttribute="height" id="pyN-fe-XN8"/>
+                    <constraint firstItem="BTV-N7-FuH" firstAttribute="width" secondItem="tcq-mv-05c" secondAttribute="width" id="wwJ-Tb-2NP"/>
+                    <constraint firstItem="BTV-N7-FuH" firstAttribute="centerY" secondItem="tcq-mv-05c" secondAttribute="centerY" id="yFn-gi-DVg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageBg" destination="a6A-IZ-kLP" id="BOa-Xk-ONE"/>
+                <outlet property="listNameLabel" destination="bH9-FB-d0m" id="AIc-pB-khD"/>
+            </connections>
+            <point key="canvasLocation" x="184" y="391.5"/>
+        </tableViewCell>
+    </objects>
+</document>
