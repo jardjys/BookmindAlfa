@@ -12,6 +12,7 @@ import Parse
 class ProfileViewController: UIViewController {
     
     var iduser = String()
+    var row = 0
     
     @IBOutlet weak var newListButton: UIButton!
     @IBOutlet weak var profPic: UIImageView!
@@ -25,6 +26,7 @@ class ProfileViewController: UIViewController {
     var lists : [PFObject] = []
     var titles : [String] = []
     var images : [PFFile] = []
+    var idslist : [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +62,11 @@ class ProfileViewController: UIViewController {
         print("prueba")
         print(iduser)
         
-        /*
+
         //Load query
         let query2 = PFQuery(className: "list")
         query2.whereKey("idowner", equalTo: iduser)
-        query2.selectKeys(["title", "cover", "author"])
+        query2.selectKeys(["title", "picture", "objectId"])
        
         do {
             //print(PFUser.currentUser())
@@ -72,14 +74,13 @@ class ProfileViewController: UIViewController {
             for object in lists {
                 titles.append(object["title"] as! String)
                 images.append(object["picture"] as! PFFile)
+                idslist.append(object["objectId"] as! String)
             }
             print("success with objects")
         } catch {
             print("Error")
             lists = []
-        }*/
-        
-        SwiftLoading().hideLoading()
+        }
 
         
         //Profile Picture style
@@ -111,9 +112,7 @@ class ProfileViewController: UIViewController {
         searchText.attributedPlaceholder = NSAttributedString(string: "Search books or authors", attributes:[NSFontAttributeName: UIFont(name: "Montserrat", size:14)!, NSForegroundColorAttributeName: UIColor.whiteColor()])
         searchText.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.5)
         
-        //Hide keyboard
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+
         
         //Button style
         newListButton.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 14)
@@ -127,11 +126,6 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //Dismiss Keyboard
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
     
     @IBAction func menuPressed(sender: AnyObject) {
         print("menupressed")
@@ -144,7 +138,17 @@ class ProfileViewController: UIViewController {
             if let useridsegue: String = self.iduser {
                 destinationVC.userid = useridsegue
             }
-        } else {
+        }
+        if segue.identifier == "listdetail" {
+            let destinationVC : ListDetailViewController = segue.destinationViewController as! ListDetailViewController
+            if let useridsegue: String = self.iduser {
+                destinationVC.iduser = useridsegue
+            }
+            if let idlist: String = self.idslist[row] {
+                destinationVC.idlist = idlist
+            }
+        }
+        else {
             //Go search
             let destinationVC : SearchViewController = segue.destinationViewController as! SearchViewController
             if let useridsegue: String = self.iduser {
@@ -204,6 +208,16 @@ class ProfileViewController: UIViewController {
         return 130.0
     }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        print("pressed")
+        print(indexPath.row)
+        self.row = indexPath.row
+        print(titles[self.row])
+        performSegueWithIdentifier("listdetail", sender: self.listTable)
+        
+
+        
+    }
     
     //Hex color reader
     func hexStringToUIColor (hex:String) -> UIColor {
